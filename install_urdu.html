@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <style>
+    /* Style for the button */
+    #install-button {
+      padding: 10px 20px;
+      background-color: blue;
+      color: white;
+    }
+
+    /* Style for the sample text */
+    #sample-text {
+      font-family: 'Noto Nastaliq Urdu';
+    }
+
+    /* Style for the message */
+    #message {
+      display: none; /* hide the message by default */
+    }
+  </style>
+</head>
+<body>
+  <button id="install-button">Install Font</button>
+  <p id="message">Installing font...</p>
+  <p id="sample-text">شاعری، ادبیات، تاریخ، جغرافیا، سیاست، تجربے، فلسفہ، نظریہ، ریاضی، علوم، تخصصی کتب، کارنامے، پیشہ، روایات، ناول، مصنفین، شاعران، نویسندگان، تحقیقات، مجلات، کتابخانہ، بلاولپ</p>
+  <script>
+    document.getElementById("install-button").addEventListener("click", function(){
+      // Show the message
+      document.getElementById("message").style.display = "block";
+      WebFont.load({
+    google: {
+      families: ['Noto Nastaliq Urdu']
+    }
+  });
+    });
+  </script>
+</body>
+</html>
